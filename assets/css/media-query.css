@@ -1,0 +1,51 @@
+@media(max-width: 400px){
+    .center{
+        position: relative;
+        left: -40px;
+        font-size: 28px;
+    }
+
+    #search-heading h3{
+        font-size: 32px;
+    }
+
+    #search-box-wrapper{
+        margin-left: 50px;
+        margin-right: 25px;
+    }
+
+    #search-box-wrapper input[type=text]{
+        width: 60%;
+        margin-top: 20vh;
+    }
+
+    #search-opener button{
+        font-size: 14px;
+    }
+
+    .errorMessage{
+        display: block;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+}
+
+
+/* media query */
+@media(max-width: 600px){
+    .center{
+        position: relative;
+        right: 30px;
+    }
+
+    .profile-frame{
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+

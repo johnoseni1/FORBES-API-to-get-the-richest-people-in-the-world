@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,800&display=swap');
+
+body{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+#loader-container{
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.nav{
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #181716;
+    color: #ffffff;
+    padding: 12px;
+}
+
+/* Navlinks are display none by default */
+#nav-link-wrapper{
+    display: none;
+    overflow: hidden;
+}
+
+#nav-link{
+    display: flex;
+    flex-direction: column;
+    background: #181716;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -12px;
+    bottom: 0;
+    height: 91%;
+    transition: 0.4s;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-link i{
+    padding-right: 15px;
+}
+
+@media (min-width: 1024px){
+    #nav-link{
+    padding: 0px 30px;
+    }
+}
+
+#nav-link a{
+    position: relative;
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 19px;
+    width: 18%;
+    padding: 12px 0px 12px 30px;
+    transition: 0.3s ease;
+}
+@media (max-width: 800px){
+    #nav-link{
+    padding: 0px 0px;
+    }
+}
+@media(max-width: 600px){
+        
+    #nav-link a{
+        width: 40%;
+    }
+}
+
+
+#nav-link a:not(:last-child){
+    margin-bottom: 30px;
+}
+
+#nav-link a:hover{
+    transition: 0.3s ease;
+    background: #cccccc;
+    color: #181716;
+    width: 100%;
+    text-align: center;
+    padding: 9px 10px 12px 10px;
+    /* transform: scale(1.1); */
+}
+
+#nav-link .actie{
+    border-bottom: 1px solid #cccccc;
+    background: #cccccc;
+    color: #181716;
+    width: 81%;
+    padding: 9px 10px 12px 10px;
+    transform: scale(1.1);
+}
+
+/*  Hamburger Style */
+.hamburger-wrapper{
+    cursor: pointer;
+    background: transparent;
+    padding: 12px 0px 12px 5px;
+    width: 100%;
+    transition: 1s;
+    z-index: 999;
+}
+
+.hamburger-wrapper:hover{
+    opacity: 0.8;
+    transition: 0.7s;
+}
+
+.hamburger{
+    height: 4px;
+    width: 35px;
+    top: 50%;
+    left: 20%;
+    cursor: pointer;
+    position: relative;
+    background: #ffffff;
+}
+
+.hamburger::after{
+    content: '';
+    top: 10px;
+    height: 4px;
+    width: 35px;
+    position: absolute;
+    background: #ffffff;
+}
+
+.hamburger::before{
+    content: '';
+    bottom: 10px;
+    height: 4px;
+    width: 35px;
+    position: absolute;
+    background: #ffffff;
+}
+
+.center{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.right{
+    font-size: 1.091rem;
+    position: relative;
+    right: 12px;
+}
+
+
+
+/* SEARCH MODAL */
+#search-opener button{
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 560;
+    cursor: pointer;
+}
+
+#search-modal{
+    display: none;
+
+}
+
+#search-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background: #181716;
+    color: #ffffff;
+    z-index: 999;
+
+}
+
+#search-heading h3{
+    font-size: 4rem;
+}
+
+#search-box-wrapper input[type=text]{
+    padding: 12px 23px;
+    font-size:20px;
+    border: none;
+    outline: none;
+}
+
+#search-box-wrapper .search-icon-wrapper{
+    font-size: 20px;
+    cursor: pointer;
+    padding: 12px 20px 13px 20px;
+    background: red;
+    text-align: center;
+    /* position: relative;
+    top: 0.499px;
+    display: inline;
+    right: 4px;
+    padding: 9px 20px 10px 19px */
+}
+
+.search-icon-wrapper .fa-search.active{
+    animation: search-spinning 2s infinite;
+
+}
+
+@keyframes search-spinning {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(30deg);
+    }
+  }
+
+/*  CLOSE ICON */
+
+#close-search-modal{
+    margin-left: auto;
+    margin-right: 70px;
+    margin-top: 20px;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+#search-modal{
+    /* transition: 0.3s ease; */
+}
+
+
+.errorMessage{
+    display: block;
+    font-size: 16px;
+    margin-left: 12px;
+    font-weight: 700;
+}
+
+.errorMessage-dark{
+    display: block;
+    font-size: 16px;
+    margin-left: 12px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 900px){
+    #search-box-wrapper .search-icon-wrapper{
+
+        position: relative;
+        top: 0.499px;
+        display: inline;
+        right: 4px;
+        padding: 9px 20px 10px 19px
+    }
+}

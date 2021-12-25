@@ -1,0 +1,151 @@
+
+/* MOBILE FIRST APPROACH */
+
+.single-profile-wrapper .section-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.single-profile-wrapper .profile__image{
+    width: 100%;
+}
+
+.profile__image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.single-profile-wrapper .profile__details{
+    width: 100%;
+}
+
+.profile__details ul{
+    padding: 0;
+    list-style: none;
+}
+
+.profile__details ul li{
+    padding: 8px 0px;
+    font-size: 1.1rem;
+}
+
+.profile__details ul li span{
+    font-size: 19px;
+    font-weight: 550;
+    line-height: 1.3;
+    color: #555;
+}
+
+.profile__details ul li .label{
+    line-height: 1.5;
+    font-size: 18px;
+    color: #222;
+    font-weight: 400;
+}
+    
+.section-2{
+    padding: 10px 20px;
+    transition: 0.3s ease;
+}
+
+.section-2 ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.section-2 ul li span{
+    color: #555;
+    font-weight: 550;
+}
+
+.section-2 ul li{
+    font-size: 18px;
+    font-weight: 400;
+    color: #222;
+    line-height: 2;
+}
+
+.section-2 .source{
+    color: #555;
+    text-transform: capitalize;
+}
+
+.section-2 .developer{
+    display: block;
+    font-size: 15px;
+    margin: 20px 0px;
+}
+
+
+@media (min-width: 576px){
+        
+    /* MOBILE FIRST APPROACH */
+    .single-profile-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0px;
+        
+    }
+
+    .single-profile-wrapper .section-1{
+        flex-direction: row;
+        width: 700px;
+        max-width: 700px;
+    }
+
+    .single-profile-wrapper .profile__image{
+        width: 50%;
+    }
+
+    .single-profile-wrapper .profile__details{
+        padding-left: 30px;
+    }
+
+    .profile__details ul li{
+        padding: 10px 0px;
+    }
+
+    .profile__details ul li:first-child{
+        padding-top: 0px;
+    }
+
+    .profile__details ul li span{
+        line-height: 1.3;
+    }
+
+    .section-2{
+        transition: 0.3s ease;
+        width: 700px;
+        max-width: 700px;
+    }
+
+    .section-2 .developer{
+        display: inline;
+        float: right;
+        margin: 0px 0px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 750px) { 
+    .single-profile-wrapper .section-1{
+        width: 90%;
+    }
+
+    .section-2{
+        width: 90%;
+    }
+
+    .profile__details ul li{
+        padding: 5px 0px;
+    }
+ }

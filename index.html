@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORBES API</title>
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/frame.css">
+    <link rel="stylesheet" href="assets/css/frame.css">
+    <link rel="stylesheet" href="assets/css/view-profile.css">
+    <!-- ICON CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <nav class="nav">
+            <div>
+                <section class="hamburger-wrapper" id="hamburger-btn">
+                    <div class="hamburger" id="hamburger"></div>
+                </section>
+                <div id="nav-link-wrapper">
+                    <section id="nav-link">
+                        <a href="#" class="view-more" onclick="window.location.reload()"><i class="fas fa-home"></i> Home</a>
+                        <a href="https://twitter.com/johnoseni4" class="active"> <i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="linkedin.com/in/john-oseni-4b8b001b0/" class=""> <i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://linktr.ee/johnoseni" class=""><i class="fas fa-briefcase"> </i>Hire Me</a>
+                    </section>
+                </div>
+            </div>
+            <div class="center">FORBES Richest people</div>
+            <div class="right">
+                <div id="search-opener">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+        </nav>
+        <div id="loader-container"></div>
+        <div id="search-modal">
+            <section id="search-wrapper">
+                <span id="close-search-modal">X</span>
+                <div id="search-heading">
+                    <h3>FORBES</h3>
+                </div>
+                <div class="">
+                    <span id="result__message"></span>
+                </div>
+                <!-- SEARCH BAR -->
+                <form id="search-box-wrapper" class="search-form">
+                    <input type="text" placeholder="Search" class="lookup__name" autofocus> 
+                    <div role="button" class="search-icon-wrapper" onclick="lookUpName()">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+
+    <!-- APP SECTION FOR DISPLAYING THE HOME PAGE CARDS -->
+    <main class="app-main">
+        <section id="profiles-frame-wrapper">
+            <div class="profiles-frame" id="d__frame"></div>
+        </section>
+
+        <!-- DEVELOPER NAME -->
+        <section class="mini-footer">
+            <strong class="developer">Created By <a href="https://linktr.ee/johnoseni" target="_blank">John Oseni</strong>
+        </section>
+    </main>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/singleProfile.js"></script>
+</body>
+</html>
